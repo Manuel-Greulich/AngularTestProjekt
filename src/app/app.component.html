@@ -1,4 +1,7 @@
-<app-menu></app-menu>
-<app-slideshow></app-slideshow>
+<app-menu [darkMode]="router.url !== '/'"></app-menu>
+<div [class.container]="router.url !== '/'">
+    <router-outlet></router-outlet>
+</div>
+
 
 
