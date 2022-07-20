@@ -1,0 +1,62 @@
+.img-slideshow{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+    max-width: 100%;
+    animation: zoomIn 8s ease infinite;
+}
+
+.slideshow-container{
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    overflow: hidden;  // remove scrollbar for the zoom in
+}
+
+.slideshow-overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+
+    p {
+        max-width: 800px;
+        padding-left: 25px;
+        color: white;
+        font-size: 80px;
+        border-left: 8px solid #d85050;
+        margin-left: 120px;
+    }
+}
+
+.fadeIn{
+    animation: fadeInAnimation 1.2s ease-in-out;
+}
+
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+// Animationen 
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+
+
