@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  title= 'manuelgreulich';
   images = ['code.jpg', 'macbook.jpg', 'turm.jpg']; 
   currentImage = 0;
+  showImage = true;
 
   ngOnInit(){
     this.updateImage();
@@ -17,6 +19,11 @@ export class AppComponent implements OnInit {
     setInterval(() => {
       this.currentImage++;
       this.currentImage = this.currentImage % this.images.length;
+      this.showImage = false;
+
+      setTimeout(() => {
+        this.showImage = true;
+      }, 10);
     }, 8000);
   }
 
